@@ -34,9 +34,9 @@ namespace Sube2.HelloWindowsApp
             MessageBox.Show(buton.Text);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_SizeChanged(object sender, EventArgs e)
         {
-            //MessageBox.Show("Form Load Tetiklendi!");
+            btnHello.Location = new Point(btnHello.Location.X + 1, btnHello.Location.Y + 1);
         }
     }
 }
@@ -45,4 +45,5 @@ namespace Sube2.HelloWindowsApp
 //Bir event'in method ile ilişkilenebilmesi için, metod imzasının uygun olması gerekir.
 //Bir metod, birden fazla nesnenin eventleri ile ilişkilenebilir.
 //sender: Event hangi nesne tarafından gönderilmişse, o nesnenin referansını tutar. Dolayısıyla nesneye erişebilir.
+//Default Event: Bir control'e çift tıklayarak, bu event ile ilişkilenecek metod yazdırırlabilir.
 

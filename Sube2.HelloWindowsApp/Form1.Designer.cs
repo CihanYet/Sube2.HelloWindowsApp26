@@ -61,7 +61,7 @@
             Controls.Add(btnHello);
             Name = "Form1";
             Text = "Form1";
-            Load += Form1_Load;
+            SizeChanged += Form1_SizeChanged;
             ResumeLayout(false);
             PerformLayout();
         }
