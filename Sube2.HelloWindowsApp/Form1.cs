@@ -38,6 +38,11 @@ namespace Sube2.HelloWindowsApp
         {
             btnHello.Location = new Point(btnHello.Location.X + 1, btnHello.Location.Y + 1);
         }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblKoordinat.Text = $"X:{e.X} Y:{e.Y}";
+        }
     }
 }
 

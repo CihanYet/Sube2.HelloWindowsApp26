@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             btnHello = new Button();
-            label1 = new Label();
+            lblKoordinat = new Label();
             SuspendLayout();
             // 
             // btnHello
@@ -43,25 +43,25 @@
             btnHello.Click += MyButtonClick;
             btnHello.Move += button1_Move;
             // 
-            // label1
+            // lblKoordinat
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(399, 96);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 1;
-            label1.Text = "label1";
+            lblKoordinat.AutoSize = true;
+            lblKoordinat.Location = new Point(399, 96);
+            lblKoordinat.Name = "lblKoordinat";
+            lblKoordinat.Size = new Size(0, 15);
+            lblKoordinat.TabIndex = 1;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            Controls.Add(lblKoordinat);
             Controls.Add(btnHello);
             Name = "Form1";
             Text = "Form1";
             SizeChanged += Form1_SizeChanged;
+            MouseMove += Form1_MouseMove;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -69,6 +69,6 @@
         #endregion
 
         private Button btnHello;
-        private Label label1;
+        private Label lblKoordinat;
     }
 }
