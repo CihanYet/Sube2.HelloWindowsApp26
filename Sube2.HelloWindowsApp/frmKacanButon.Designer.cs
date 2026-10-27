@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             btnKac = new Button();
+            pnlinfo = new Panel();
+            lblSkor = new Label();
+            pnlinfo.SuspendLayout();
             SuspendLayout();
             // 
             // btnKac
             // 
-            btnKac.Location = new Point(337, 145);
+            btnKac.Location = new Point(103, 151);
             btnKac.Name = "btnKac";
             btnKac.Size = new Size(94, 82);
             btnKac.TabIndex = 0;
@@ -41,19 +44,42 @@
             btnKac.UseVisualStyleBackColor = true;
             btnKac.MouseMove += button1_MouseMove;
             // 
+            // pnlinfo
+            // 
+            pnlinfo.BackColor = Color.FromArgb(192, 255, 192);
+            pnlinfo.Controls.Add(lblSkor);
+            pnlinfo.Location = new Point(750, -2);
+            pnlinfo.Name = "pnlinfo";
+            pnlinfo.Size = new Size(131, 522);
+            pnlinfo.TabIndex = 1;
+            // 
+            // lblSkor
+            // 
+            lblSkor.AutoSize = true;
+            lblSkor.Location = new Point(47, 103);
+            lblSkor.Name = "lblSkor";
+            lblSkor.Size = new Size(0, 15);
+            lblSkor.TabIndex = 0;
+            // 
             // frmKacanButon
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(484, 461);
+            ClientSize = new Size(880, 520);
+            Controls.Add(pnlinfo);
             Controls.Add(btnKac);
             Name = "frmKacanButon";
             Text = "frmKacanButon";
+            SizeChanged += frmKacanButon_SizeChanged;
+            pnlinfo.ResumeLayout(false);
+            pnlinfo.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button btnKac;
+        private Panel pnlinfo;
+        private Label lblSkor;
     }
 }
