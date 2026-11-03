@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             grpKullanici = new GroupBox();
-            txtAd = new TextBox();
-            txtSoyad = new TextBox();
-            lblAd = new Label();
-            lblSoyad = new Label();
             btnGiris = new Button();
+            lblSoyad = new Label();
+            lblAd = new Label();
+            txtSoyad = new TextBox();
+            txtAd = new TextBox();
             grpKullanici.SuspendLayout();
             SuspendLayout();
             // 
@@ -51,28 +51,15 @@
             grpKullanici.TabStop = false;
             grpKullanici.Text = "Kullanıcı Bilgileri";
             // 
-            // txtAd
+            // btnGiris
             // 
-            txtAd.Location = new Point(93, 41);
-            txtAd.Name = "txtAd";
-            txtAd.Size = new Size(100, 23);
-            txtAd.TabIndex = 0;
-            // 
-            // txtSoyad
-            // 
-            txtSoyad.Location = new Point(93, 71);
-            txtSoyad.Name = "txtSoyad";
-            txtSoyad.Size = new Size(100, 23);
-            txtSoyad.TabIndex = 1;
-            // 
-            // lblAd
-            // 
-            lblAd.AutoSize = true;
-            lblAd.Location = new Point(49, 49);
-            lblAd.Name = "lblAd";
-            lblAd.Size = new Size(22, 15);
-            lblAd.TabIndex = 2;
-            lblAd.Text = "Ad";
+            btnGiris.Location = new Point(93, 111);
+            btnGiris.Name = "btnGiris";
+            btnGiris.Size = new Size(100, 23);
+            btnGiris.TabIndex = 4;
+            btnGiris.Text = "Giriş";
+            btnGiris.UseVisualStyleBackColor = true;
+            btnGiris.Click += btnGiris_Click;
             // 
             // lblSoyad
             // 
@@ -83,14 +70,30 @@
             lblSoyad.TabIndex = 3;
             lblSoyad.Text = "Soyad";
             // 
-            // btnGiris
+            // lblAd
             // 
-            btnGiris.Location = new Point(93, 111);
-            btnGiris.Name = "btnGiris";
-            btnGiris.Size = new Size(100, 23);
-            btnGiris.TabIndex = 4;
-            btnGiris.Text = "Giriş";
-            btnGiris.UseVisualStyleBackColor = true;
+            lblAd.AutoSize = true;
+            lblAd.Location = new Point(49, 49);
+            lblAd.Name = "lblAd";
+            lblAd.Size = new Size(22, 15);
+            lblAd.TabIndex = 2;
+            lblAd.Text = "Ad";
+            // 
+            // txtSoyad
+            // 
+            txtSoyad.Location = new Point(93, 71);
+            txtSoyad.Name = "txtSoyad";
+            txtSoyad.Size = new Size(100, 23);
+            txtSoyad.TabIndex = 1;
+            txtSoyad.Tag = "Z";
+            // 
+            // txtAd
+            // 
+            txtAd.Location = new Point(93, 41);
+            txtAd.Name = "txtAd";
+            txtAd.Size = new Size(100, 23);
+            txtAd.TabIndex = 0;
+            txtAd.Tag = "Z";
             // 
             // frmGiris
             // 

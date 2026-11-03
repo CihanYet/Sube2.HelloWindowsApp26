@@ -19,7 +19,7 @@ namespace Sube2.HelloWindowsApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // baslangic.Text = txtBaslik.Text;
+           // baslangic.Text = txtBaslik.Text;
             Application.OpenForms["frmBaslangic"].Text = txtBaslik.Text;
         }
     }

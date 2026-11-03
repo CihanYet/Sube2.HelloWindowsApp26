@@ -12,9 +12,10 @@ namespace Sube2.HelloWindowsApp
     {
         int skor = 0;
 
-        public frmKacanButon()
-        {
+        public frmKacanButon(string ad,string soyad)
+        {           
             InitializeComponent();
+            lblKullanici.Text = ad + " " + soyad;
         }
 
         private void button1_MouseMove(object sender, MouseEventArgs e)

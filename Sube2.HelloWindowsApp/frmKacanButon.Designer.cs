@@ -30,8 +30,8 @@
         {
             btnKac = new Button();
             pnlinfo = new Panel();
+            lblKullanici = new Label();
             lblSkor = new Label();
-            label1 = new Label();
             pnlinfo.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,12 +48,21 @@
             // pnlinfo
             // 
             pnlinfo.BackColor = Color.FromArgb(192, 255, 192);
-            pnlinfo.Controls.Add(label1);
+            pnlinfo.Controls.Add(lblKullanici);
             pnlinfo.Controls.Add(lblSkor);
             pnlinfo.Location = new Point(750, -2);
             pnlinfo.Name = "pnlinfo";
             pnlinfo.Size = new Size(131, 522);
             pnlinfo.TabIndex = 1;
+            // 
+            // lblKullanici
+            // 
+            lblKullanici.AutoSize = true;
+            lblKullanici.Location = new Point(47, 187);
+            lblKullanici.Name = "lblKullanici";
+            lblKullanici.Size = new Size(38, 15);
+            lblKullanici.TabIndex = 1;
+            lblKullanici.Text = "label1";
             // 
             // lblSkor
             // 
@@ -62,15 +71,6 @@
             lblSkor.Name = "lblSkor";
             lblSkor.Size = new Size(0, 15);
             lblSkor.TabIndex = 0;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(47, 187);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 1;
-            label1.Text = "label1";
             // 
             // frmKacanButon
             // 
@@ -92,6 +92,6 @@
         private Button btnKac;
         private Panel pnlinfo;
         private Label lblSkor;
-        private Label label1;
+        public Label lblKullanici;
     }
 }
