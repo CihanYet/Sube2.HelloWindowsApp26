@@ -34,28 +34,32 @@
             lblAd = new Label();
             txtSoyad = new TextBox();
             txtAd = new TextBox();
+            grpSeviye = new GroupBox();
+            rdKolay = new RadioButton();
+            rdOrta = new RadioButton();
+            rdZor = new RadioButton();
             grpKullanici.SuspendLayout();
+            grpSeviye.SuspendLayout();
             SuspendLayout();
             // 
             // grpKullanici
             // 
-            grpKullanici.Controls.Add(btnGiris);
             grpKullanici.Controls.Add(lblSoyad);
             grpKullanici.Controls.Add(lblAd);
             grpKullanici.Controls.Add(txtSoyad);
             grpKullanici.Controls.Add(txtAd);
             grpKullanici.Location = new Point(35, 29);
             grpKullanici.Name = "grpKullanici";
-            grpKullanici.Size = new Size(247, 154);
+            grpKullanici.Size = new Size(247, 123);
             grpKullanici.TabIndex = 0;
             grpKullanici.TabStop = false;
             grpKullanici.Text = "Kullanıcı Bilgileri";
             // 
             // btnGiris
             // 
-            btnGiris.Location = new Point(93, 111);
+            btnGiris.Location = new Point(35, 268);
             btnGiris.Name = "btnGiris";
-            btnGiris.Size = new Size(100, 23);
+            btnGiris.Size = new Size(247, 49);
             btnGiris.TabIndex = 4;
             btnGiris.Text = "Giriş";
             btnGiris.UseVisualStyleBackColor = true;
@@ -86,6 +90,7 @@
             txtSoyad.Size = new Size(100, 23);
             txtSoyad.TabIndex = 1;
             txtSoyad.Tag = "Z";
+            txtSoyad.TextChanged += txt_TextChanged;
             // 
             // txtAd
             // 
@@ -94,17 +99,67 @@
             txtAd.Size = new Size(100, 23);
             txtAd.TabIndex = 0;
             txtAd.Tag = "Z";
+            txtAd.TextChanged += txt_TextChanged;
+            // 
+            // grpSeviye
+            // 
+            grpSeviye.Controls.Add(rdZor);
+            grpSeviye.Controls.Add(rdOrta);
+            grpSeviye.Controls.Add(rdKolay);
+            grpSeviye.Location = new Point(35, 169);
+            grpSeviye.Name = "grpSeviye";
+            grpSeviye.Size = new Size(247, 82);
+            grpSeviye.TabIndex = 1;
+            grpSeviye.TabStop = false;
+            grpSeviye.Text = "Seviye Seçiniz";
+            // 
+            // rdKolay
+            // 
+            rdKolay.AutoSize = true;
+            rdKolay.Location = new Point(35, 37);
+            rdKolay.Name = "rdKolay";
+            rdKolay.Size = new Size(54, 19);
+            rdKolay.TabIndex = 0;
+            rdKolay.TabStop = true;
+            rdKolay.Text = "Kolay";
+            rdKolay.UseVisualStyleBackColor = true;
+            // 
+            // rdOrta
+            // 
+            rdOrta.AutoSize = true;
+            rdOrta.Location = new Point(101, 37);
+            rdOrta.Name = "rdOrta";
+            rdOrta.Size = new Size(48, 19);
+            rdOrta.TabIndex = 1;
+            rdOrta.TabStop = true;
+            rdOrta.Text = "Orta";
+            rdOrta.UseVisualStyleBackColor = true;
+            // 
+            // rdZor
+            // 
+            rdZor.AutoSize = true;
+            rdZor.Location = new Point(166, 37);
+            rdZor.Name = "rdZor";
+            rdZor.Size = new Size(43, 19);
+            rdZor.TabIndex = 2;
+            rdZor.TabStop = true;
+            rdZor.Text = "Zor";
+            rdZor.UseVisualStyleBackColor = true;
             // 
             // frmGiris
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(327, 220);
+            ClientSize = new Size(322, 349);
+            Controls.Add(btnGiris);
+            Controls.Add(grpSeviye);
             Controls.Add(grpKullanici);
             Name = "frmGiris";
             Text = "frmGiris";
             grpKullanici.ResumeLayout(false);
             grpKullanici.PerformLayout();
+            grpSeviye.ResumeLayout(false);
+            grpSeviye.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -116,5 +171,9 @@
         private TextBox txtSoyad;
         private TextBox txtAd;
         private Button btnGiris;
+        private GroupBox grpSeviye;
+        private RadioButton rdZor;
+        private RadioButton rdOrta;
+        private RadioButton rdKolay;
     }
 }

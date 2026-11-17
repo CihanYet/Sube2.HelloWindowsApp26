@@ -17,25 +17,67 @@ namespace Sube2.HelloWindowsApp
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            //if (txtAd.Text.Trim() == String.Empty || txtSoyad.Text.Trim() == String.Empty)
-            //{
-            //    MessageBox.Show("Tüm Alanlar Zorunludur");
-            //    return;
-            //}
 
-            foreach (Control item in this.Controls["grpKullanici"].Controls)
+
+            if (!BoslukVarMi(this.Controls["grpKullanici"].Controls, "Z"))
             {
-                if (item is TextBox && item.Tag != null && item.Tag.ToString() == "Z" && item.Text == String.Empty)
+                var frm = new frmKacanButon(txtAd.Text, txtSoyad.Text);
+                if (rdKolay.Checked)
                 {
-                    MessageBox.Show("Tüm alanlar zorunludur");
-                    //item.BackColor = Color.Red;
+                    frm.Size = new Size(300, 300);
+                }
+                else if (rdOrta.Checked)
+                {
+                    frm.Size = new Size(500, 500);
+                }
+                else if(rdZor.Checked)
+                {
+                    frm.Size = new Size(800, 800);
+                }
+                else
+                {
+                    MessageBox.Show("Seviye Seçiniz!");
                     return;
                 }
+                frm.Show();
             }
+            else
+            {
+                MessageBox.Show("Tüm Alanlar Zorunludur!");
+            }
+        }
+        bool BoslukVarMi(Control.ControlCollection controls, string karakter)
+        {
+            bool sonuc = false;
+            foreach (Control item in controls)
+            {
+                if (item is TextBox && item.Tag != null && item.Tag.ToString() == karakter && item.Text == String.Empty)
+                {
+                    item.BackColor = Color.Red;
+                    sonuc = true;
+                }
+            }
+            //if (sonuc)
+            //{
+            //    MessageBox.Show("Tüm alanlar zorunludur");
+            //}
+            return sonuc;
+        }
 
-            var frm = new frmKacanButon(txtAd.Text, txtSoyad.Text);
-            //frm.lblKullanici.Text = $"{txtAd.Text} {txtSoyad.Text}";
-            frm.Show();
+        private void txt_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+            //if (txt.Text == String.Empty)
+            //{
+            //    txt.BackColor = Color.White;
+            //}
+            //else
+            //{
+            //    txt.BackColor = Color.Red;
+            //}
+
+            txt.BackColor = txt.Text == String.Empty ? Color.Red : Color.White;
+
         }
     }
 }
